@@ -78,40 +78,35 @@ The application demonstrates Cloud Computing concepts including:
                  Dashboard
 ```
 
-4. Cloud Computing Concepts Demonstrated
-Cloud Computing
-
+## 4. Cloud Computing Concepts Demonstrated
+### Cloud Computing
 The application uses cloud services to provide authentication and persistent application data.
 
-SaaS
-
+### SaaS
 The completed web application can be accessed through a browser without requiring users to install the complete application locally.
 
-PaaS
-
+### PaaS
 Firebase provides managed application services such as Authentication and Firestore.
 
-IaaS
-
+### IaaS
 The project architecture can be extended to deploy the Python backend on a cloud infrastructure service.
 
-Cloud Database
-
+### Cloud Database
 Firestore stores:
-
-User profiles
-Generated diet plans
-Daily tracking information
-Authentication
-
+  User profiles
+  Generated diet plans
+  Daily tracking information
+  
+### Authentication
 Firebase Authentication manages user registration and login.
 
-REST API
-
+### REST API
 The React frontend communicates with the Python Flask backend through:
 
-POST /api/generate-plan
-Client-Server Architecture
+```text POST /api/generate-plan
+```
+### Client-Server Architecture
+```text
 React Client
      |
      | HTTP Request
@@ -126,23 +121,23 @@ HTTP Response
      |
      v
 React Client
-Security
-
+```
+## Security
 Firestore security rules restrict users to their own data.
 
 Example:
-
+```text
 request.auth.uid == userId
-
+```
 This prevents one authenticated user from directly accessing another user's protected documents.
 
-5. Database Structure
-users
+## 5. Database Structure
+### users
 
 Stores user profile information.
 
 Example fields:
-
+```text
 name
 age
 height
@@ -153,12 +148,13 @@ goal
 allergies
 email
 updatedAt
-diet_plans
+```
 
+### diet_plans
 Stores generated diet plans.
 
 Example fields:
-
+```text
 userId
 dietaryPreference
 goal
@@ -169,33 +165,34 @@ dinner
 hydration
 nutritionSummary
 createdAt
-daily_trackers
+```
 
+### daily_trackers
 Stores daily meal and hydration tracking information.
 
 Example fields:
-
+```text
 userId
 date
 meals
 water
 updatedAt
-
-6. AI Diet Generation
+```
+## 6. AI Diet Generation
 
 The current implementation uses a local rule-based engine.
 
-The backend receives:
-
+### The backend receives:
+```text
 {
   "dietaryPreference": "Vegetarian",
   "goal": "Balanced eating"
 }
-
+```
 The Flask API processes the request and returns a structured diet plan.
 
-Current architecture:
-
+### Current architecture:
+```text
 User Input
     |
     v
@@ -209,10 +206,10 @@ Rule-Based Diet Engine
     |
     v
 Generated Diet Plan
-
+```
 The architecture can later be extended with an external AI API while keeping the API key on the backend.
 
-7. Cloud Storage Status
+## 7. Cloud Storage Status
 
 Firebase Cloud Storage was evaluated for the project.
 
@@ -222,7 +219,7 @@ To keep the student project free, billing was not enabled.
 
 Therefore, the current implementation provides a browser-based file-management demonstration instead of claiming to use Firebase Cloud Storage.
 
-Current implementation
+### Current implementation
 
 Users can:
 
@@ -230,12 +227,13 @@ Select files
 View uploaded filenames
 View file size
 View MIME type
-Production extension
+
+### Production extension
 
 For a fully cloud-based production implementation, Firebase Cloud Storage can be connected as the object-storage layer.
 
 Architecture:
-
+```text
 React
   |
   v
@@ -246,8 +244,9 @@ Firebase Storage
   +---- Images
   |
   +---- Exported plans
+```
   
-8. Application Features
+## 8. Application Features
 Authentication
 User registration
 User login
@@ -285,7 +284,7 @@ File selection
 File information display
 Cloud-storage architecture demonstration
 
-9. Security
+## 9. Security
 
 The application uses Firebase Authentication and Firestore security rules.
 
@@ -303,7 +302,7 @@ This provides user-level data isolation.
 
 API keys for future external AI services should be stored as environment variables and must never be exposed in frontend source code.
 
-10. Error Handling
+## 10. Error Handling
 
 The application handles common failures including:
 
@@ -321,7 +320,7 @@ GET /api/health
 
 for health checking.
 
-11. Testing
+## 11. Testing
 
 The following workflows have been tested:
 
@@ -338,17 +337,18 @@ Cloud Files interface
 Logout and login
 
 Backend health endpoint:
-
+```text
 http://127.0.0.1:5000/api/health
-
+```
 Expected response:
-
+```text
 {
   "status": "healthy",
   "service": "diet-planner-backend"
 }
+```
 
-12. Free-Tier Design Decision
+## 12. Free-Tier Design Decision
 
 The project was intentionally developed without enabling paid billing.
 
@@ -364,7 +364,7 @@ Firebase Cloud Storage was not enabled because it requires the Blaze billing pla
 
 This limitation is explicitly documented rather than presenting the browser file demonstration as actual cloud object storage.
 
-13. Future Enhancements
+## 13. Future Enhancements
 
 Possible future improvements include:
 
@@ -379,7 +379,7 @@ Cloud monitoring and logging
 Automated CI/CD deployment
 Multi-device cloud file synchronization
 
-14. Project Learning Outcomes
+## 14. Project Learning Outcomes
 
 This project demonstrates practical understanding of:
 
@@ -399,7 +399,7 @@ Error handling
 Deployment architecture
 GitHub-based project documentation
 
-15. Project Status
+## 15. Project Status
 Completed
  React frontend
  Firebase Authentication
@@ -423,7 +423,7 @@ Optional / Future
  CI/CD pipeline
  Advanced monitoring
 
-16. Disclaimer
+## 16. Disclaimer
 
 This project is an educational Cloud Computing project.
 
