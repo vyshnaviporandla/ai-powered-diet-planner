@@ -76,6 +76,7 @@ The application demonstrates Cloud Computing concepts including:
                      |
                      v
                  Dashboard
+```
 
 4. Cloud Computing Concepts Demonstrated
 Cloud Computing
@@ -179,6 +180,7 @@ date
 meals
 water
 updatedAt
+
 6. AI Diet Generation
 
 The current implementation uses a local rule-based engine.
@@ -244,6 +246,7 @@ Firebase Storage
   +---- Images
   |
   +---- Exported plans
+  
 8. Application Features
 Authentication
 User registration
@@ -281,6 +284,7 @@ Cloud Files
 File selection
 File information display
 Cloud-storage architecture demonstration
+
 9. Security
 
 The application uses Firebase Authentication and Firestore security rules.
@@ -343,6 +347,7 @@ Expected response:
   "status": "healthy",
   "service": "diet-planner-backend"
 }
+
 12. Free-Tier Design Decision
 
 The project was intentionally developed without enabling paid billing.
