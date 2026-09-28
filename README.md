@@ -76,6 +76,7 @@ The application demonstrates Cloud Computing concepts including:
                      |
                      v
                  Dashboard
+
 4. Cloud Computing Concepts Demonstrated
 Cloud Computing
 
