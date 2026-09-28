@@ -103,7 +103,8 @@ Firebase Authentication manages user registration and login.
 ### REST API
 The React frontend communicates with the Python Flask backend through:
 
-```text POST /api/generate-plan
+```text
+POST /api/generate-plan
 ```
 ### Client-Server Architecture
 ```text
