@@ -1,0 +1,22 @@
+# Node
+node_modules/
+dist/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Python
+backend/venv/
+__pycache__/
+*.pyc
+
+# Firebase
+.firebase/
+firebase-debug.log
+firebaserc
+
+# Local files
+*.log
+.DS_Store
