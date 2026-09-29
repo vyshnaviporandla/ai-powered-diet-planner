@@ -40,22 +40,22 @@ function DietPlan({ user }) {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:5000/api/generate-plan",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            dietaryPreference: dietaryPreference,
-            goal: profile.goal,
-          }),
-        }
-      );
+          "https://ai-powered-diet-planner-5pne.onrender.com/api/generate-plan",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              dietaryPreference: dietaryPreference,
+              goal: profile.goal,
+            }),
+          }
+        );
 
-      if (!response.ok) {
-        throw new Error("Backend API request failed");
-      }
+        if (!response.ok) {
+          throw new Error("Backend API request failed");
+        }
 
       const generatedPlan = await response.json();
       const planData = generatedPlan.plan;
